@@ -1,0 +1,219 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Verdana", Sans-serif;
+}
+
+.head1 {
+    background-color: #458af1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    font-size: 20px;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    width: 100%;
+}
+
+.head2 {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+}
+
+.foot {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+
+.foot1 {
+    background-color: #458af1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    height: 50px;
+    color: white;
+    letter-spacing: 0.4px;
+}
+
+.container {
+    border: 6px solid #7335ed;
+    position: relative;
+    width: 310px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.canvas {
+    position: absolute;
+    top: 0;
+}
+
+/* /////////// */
+
+.confetti {
+    visibility: hidden;
+    width: 15px;
+    height: 15px;
+    background-color: #f2d74e;
+    position: absolute;
+    left: 50%;
+    animation: confetti 5s ease-in-out -1s infinite;
+    transform-origin: left top;
+}
+
+.confetti:nth-child(1) {
+    background-color: #34a853;
+    left: 20%;
+    animation-delay: -5s;
+}
+
+.confetti:nth-child(3) {
+    background-color: #ff9a91;
+    left: 30%;
+    animation-delay: -3s;
+}
+
+.confetti:nth-child(4) {
+    background-color: #f2d74e;
+    left: 40%;
+    animation-delay: -2.5s;
+}
+
+.confetti:nth-child(5) {
+    background-color: #458af1;
+    left: 50%;
+    animation-delay: -4s;
+}
+
+.confetti:nth-child(6) {
+    background-color: #ff9a91;
+    left: 60%;
+    animation-delay: -6s;
+}
+
+.confetti:nth-child(7) {
+    background-color: #34a853;
+    left: 70%;
+    animation-delay: -1.5s;
+}
+
+.confetti:nth-child(8) {
+    background-color: #458af1;
+    left: 80%;
+    animation-delay: -2s;
+}
+
+.confetti:nth-child(9) {
+    background-color: #ff9a91;
+    left: 90%;
+    animation-delay: -3.5s;
+}
+
+.confetti:nth-child(10) {
+    background-color: #f2d74e;
+    left: 100%;
+    animation-delay: -2.5s;
+}
+
+@keyframes confetti {
+    0% {
+        transform: rotateZ(15deg) rotateY(0deg) translate(0, 0);
+    }
+    25% {
+        transform: rotateZ(5deg) rotateY(360deg) translate(-5vw, 20vh);
+    }
+    50% {
+        transform: rotateZ(15deg) rotateY(720deg) translate(5vw, 60vh);
+    }
+    75% {
+        transform: rotateZ(5deg) rotateY(1080deg) translate(-10vw, 80vh);
+    }
+    100% {
+        transform: rotateZ(15deg) rotateY(1440deg) translate(10vw, 110vh);
+    }
+}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+
+.open-button {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 280px;
+}
+
+/* The popup form - hidden by default */
+
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 0px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+}
+
+/* Add styles to the form container */
+
+.form-container {
+    max-width: 100%;
+    padding: 10px;
+    background-color: white;
+}
+
+/* Full-width input fields */
+
+.form-container input[type=text],
+.form-container input[type=password] {
+    width: 90%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+
+.form-container input[type=text]:focus,
+.form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for the submit/login button */
+
+.form-container .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+
+.form-container .cancel {
+    background-color: blue;
+}
+
+/* Add some hover effects to buttons */
+
+.form-container .btn:hover,
+.open-button:hover {
+    opacity: 1;
+}
